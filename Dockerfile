@@ -8,6 +8,7 @@ RUN apk update &&\
     mkdir -p /var/cache/squid &&\
     chmod +x /docker-entrypoint.sh
 COPY conf/squid.conf /etc/squid/squid.conf
+COPY conf/squid_passwd /etc/squid/squid_passwd
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD [ "squid" ]
 EXPOSE 3128 3130
