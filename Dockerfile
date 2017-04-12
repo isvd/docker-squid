@@ -1,4 +1,4 @@
-FROM ubuntu:16:04
+FROM ubuntu:16.04
 MAINTAINER svd "svd@svd.org"
 
 COPY docker-entrypoint.sh /
