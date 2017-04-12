@@ -1,10 +1,9 @@
-FROM alpine:lastes
+FROM ubuntu:16:04
 MAINTAINER svd "svd@svd.org"
 
 COPY docker-entrypoint.sh /
-RUN apk update &&\
-    apk add --no-cache su-exec &&\
-    apk add --no-cache squid=3.5.17-r0 && \
+RUN apt update &&\
+    apt install squid && \
     mkdir -p /var/cache/squid &&\
     chmod +x /docker-entrypoint.sh
 COPY conf/squid.conf /etc/squid/squid.conf
