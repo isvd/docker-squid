@@ -3,7 +3,7 @@ MAINTAINER svd "svd@svd.org"
 
 COPY docker-entrypoint.sh /
 RUN apt update &&\
-    apt install squid && \
+    apt install -y squid && \
     mkdir -p /var/cache/squid &&\
     chmod +x /docker-entrypoint.sh
 COPY conf/squid.conf /etc/squid/squid.conf
