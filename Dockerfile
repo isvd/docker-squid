@@ -1,5 +1,5 @@
-FROM alpine:3.3
-MAINTAINER Stephen Bunn "scbunn@sbunn.org"
+FROM alpine:lastes
+MAINTAINER svd "svd@svd.org"
 
 COPY docker-entrypoint.sh /
 RUN apk update &&\
